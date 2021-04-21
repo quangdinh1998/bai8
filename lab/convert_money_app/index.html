@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Covert money app</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><strong>Amount</strong></td>
+            <td><strong>From Currency</strong></td>
+            <td><strong>To Currency</strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="number" id="Amount"/></td>
+            <td>
+                <select>
+                    <option value="23000" id="from">VietNam</option>
+                </select>
+            </td>
+            <td>
+                <select>
+                    <option value="1" id="to">USD</option>
+            </select>
+            </td>
+            <td>
+                <button type="button" onclick="convert()" style="background-color: teal;">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <h5 id="result"><strong>Result</strong></h5>
+    <script src="covert.js"></script>
+</body>
+</html>
