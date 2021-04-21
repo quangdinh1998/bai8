@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tank game</title>
+</head>
+<body>
+    <div style="border: 1px solid black; height: 190px; width: 190px; background-color: black;">
+        <img id="tank" src="tank.png" alt="tank not found!!!"
+        style="position:relative ; top:0px; left:0px;"
+        height="19px"
+        width="19px"/>
+    </div>
+    <table>
+        <tr>
+            <td></td>
+            <td>
+                <button id="up" type="button" style="background-color: blueviolet; width: 60px;" onclick="up()">UP</button>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <button id="left" type="button" style="background-color: blueviolet; width: 60px;" onclick="left()">LEFT</button>
+            </td>
+            <td></td>
+            <td>
+                <button id="right" type="button" style="background-color: blueviolet; width: 60px;" onclick="right()">RIGHT</button>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button id="down" type="button" style="background-color: blueviolet; width: 60px;" onclick="down()">DOWN</button>
+            </td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>
+<script>
+    function down() { 
+        let x = parseInt(document.getElementById('tank').style.left);
+        let y = parseInt(document.getElementById('tank').style.top);  
+        document.getElementById('tank').style.top = y + 19 + "px";
+        document.getElementById('tank').style.left = x + 0 + "px";
+    }
+    function up() { 
+        let x = parseInt(document.getElementById('tank').style.left);
+        let y = parseInt(document.getElementById('tank').style.top);  
+        document.getElementById('tank').style.top = y - 19 + "px";
+        document.getElementById('tank').style.left = x + 0 + "px";
+    }
+    function left() { 
+        let x = parseInt(document.getElementById('tank').style.left);
+        let y = parseInt(document.getElementById('tank').style.top);  
+        document.getElementById('tank').style.top = y + 0 + "px";
+        document.getElementById('tank').style.left = x - 19  + "px";
+    }
+    function right() { 
+        let x = parseInt(document.getElementById('tank').style.left);
+        let y = parseInt(document.getElementById('tank').style.top);  
+        document.getElementById('tank').style.top = y + 0 + "px";
+        document.getElementById('tank').style.left = x + 19 + "px";
+    }
+</script>
